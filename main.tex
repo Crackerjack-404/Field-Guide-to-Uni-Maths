@@ -1,0 +1,148 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath, amsfonts, amsthm, amssymb, fontspec}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\usepackage{xcolor} 
+\usepackage{quotchap}
+\usepackage{anyfontsize}
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{.5\textwidth}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{hyperref,cleveref,comment}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{appendix}
+\usepackage{parskip}
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{contour}
+\usepackage{ulem}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyvrb}
+\usepackage{lastpage, cancel}
+\usepackage{derivative}
+\usepackage{newpxtext,newpxmath}
+
+%\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage[Conny]{fncychap}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\pagenumbering{arabic}
+\hypersetup{pdfborder=0 0 0}
+\setmathfont{NewComputerModernMath}[math-style=TeX,bold-style=upright]
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+% Each week, someone will look at this for the last time, what would the most useful thing they should see? 
+
+%Ok, new idea, have this guide as a resource (expecting people to read say 10k words is a bit unrealistic). For each section have mini bite-sized cheat sheets that can be sent to students in a welcome email or something post results day/clearing, similar to what we have for LA 2 lectures. 
+
+% Once more drafts are completed, plan to include a selection of XCKD. 
+
+\begin{document}
+
+
+\title{A Field Guide to Mathematics at Southampton}
+\author{
+  1st Year Student (25/26) 
+}
+
+\maketitle
+
+% Answering - what on earth this is 
+\chapter*{What This Guide Is (and Isn't)} 
+
+% Write the abstract/introduction twice - once at the start, and once at the end. Right now, as I'm working on this, I will not be checking my writing as I write without consciously thinking about it.. the second I start acutally thinking I will stop writing. Editing will come later, or else this will end up way too many words, "Kill your darlings, kill your darlings, even when it breaks your egocentric little scribbler's heart"
+
+\epigraph{Mathematics is one of the most beautiful things in the world and it brings joy and fulfilment and frustration in equal measure, and what more could you possibly want out of life}
+{\textit{Graham A. Niblo}}
+
+
+% This is not a maths textbook, so don't read it like one. Think of it as a transition guide from school to university mathematics. This guide is written by a first-year student, and intended for first year students as a personal reflection of how the transition to maths felt like. 
+
+% Talk about what the guide covers briefly, it's designed to address FAQs and confusions regarindg the subject here. 
+
+% In the chapters that follow, I'll talk about the mindset shift itself, alongside making the most of lectures and resources, the temptation to outsource thinking, dealing with exams, time management, and in general, things I wish I had known before I got here.
+
+This is not a Maths textbook.
+
+It won’t teach you how to compute an integral or prove a theorem step by step. It won’t replace lectures, problem sheets, or workshops, and it isn’t a shortcut through the degree.
+
+Think of it instead as a transition guide, written from inside the experience and not from the other side of it.
+
+There are countless books and resources about transitioning to university mathematics. However, most I found were written by people who had already finished the journey and looked back with clarity and hindsight, so I wanted something written from inside the process, something honest that reflects what progress feels like while it's happening. 
+
+This guide is written by a student who is still in the process of learning how to do university mathematics. That matters. It means the reflections here are not polished by years of hindsight, but shaped by recent confusion, breakthroughs, stress before exams, and moments where something finally clicked.
+
+There is a difference between having mathematical tools and knowing how to use them in an unfamiliar territory. At school, I often felt like I was collecting tools, and when I came to university, I realised I didn't always know how to use them. 
+
+This is not comprehensive, it does not cover every module or every scenario. It is simply an attempt to articulate the parts of the degree that are rarely written down: the mindset shift, the moments of doubt, the practical habits that make things easier, and the difference between understanding something and merely recognising it.
+
+In the chapters that follow, I’ll talk about:
+\begin{itemize}
+    \item The shift from school mathematics to university mathematics
+    \item What lectures, coursework, and workshops are really for
+    \item How to approach problem solving when you don’t immediately know what to do
+    \item The temptation to outsource thinking, and what that costs
+    \item Revision, exams, and time management 
+    \item Asking for help, giving useful feedback, and making the most of helpful resources
+\end{itemize}
+
+This guide isn’t here to solve all possible problems you may encounter, but it's here to help you think about how you learn. You don’t need to read it all at once. Some chapters might resonate immediately, others might make more sense later.
+
+University mathematics is demanding, but also deeply rewarding. And this guide is simply an attempt to make the path into it a little clearer. 
+
+I've also scattered a few \textbf{\href{https://xkcd.com/}{xkcd}} references along the way because sometimes, a well-timed joke explains the mood of mathematics better than a paragraph every could. 
+
+Not everyone signs up for a maths degree wanting a philosophical reflection on learning, and that's completely fine. But if you want to care about how you learn, and not just what you learn, I hope this helps.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{xkcd/manuels.png}
+    \caption{\textbf{\href{https://xkcd.com/1343/}{Manuels}}}
+\end{figure}
+
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\mychapter{1}{The Jump}
+\input{jump}
+
+\mychapter{2}{Lectures and Coursework}
+\input{lectures}
+% need to cover overview/core skills/problem class sections
+
+\mychapter{3}{Workshops and Other Resources}
+\input{workshops}
+
+\mychapter{4}{Problem Solving}
+\input{problemSolving}
+% Section pretty much completed
+% Would be nice to include a selection of xkcd 
+
+\mychapter{5}{Exams}
+\input{exams}
+
+\mychapter{6}{Time Management}
+\input{timeManagement} 
+
+\mychapter{7}{Future}
+\input{future}
+
+\mychapter{8}{Useful Links}
+\input{usefulLinks}
+
+\listoffigures
+
+
+\end{document}
