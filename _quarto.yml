@@ -22,3 +22,4 @@ format:
     css: styles.css
     toc: true
     search: true
+    number-sections: true
