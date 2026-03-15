@@ -1,1 +1,13 @@
-
+ book_filename: "maths-guide"
+output_dir: "docs"
+delete_merged_file: true
+rmd_files:
+  - index.Rmd
+  - generated/01-jump.Rmd
+  - generated/02-lectures.Rmd
+  - generated/03-workshops.Rmd
+  - generated/04-problemSolving.Rmd
+  - generated/05-exams.Rmd
+  - generated/06-timeManagement.Rmd
+  - generated/07-future.Rmd
+  - generated/08-usefulLinks.Rmd
