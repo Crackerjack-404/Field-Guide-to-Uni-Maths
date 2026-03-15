@@ -1,14 +1,15 @@
 project:
   type: book
   output-dir: docs
-
+  
 book:
-  title: "Field Guide to Mathematics at University"
-  author: "First Year Student 25/26"
   navbar:
     right:
       - text: Download PDF
         href: pdf/field-guide.pdf
+  title: "Field Guide to Mathematics at University"
+  author: "First Year Student 25/26"
+
   chapters:
     - index.qmd
     - file: chapters/01-jump.qmd
