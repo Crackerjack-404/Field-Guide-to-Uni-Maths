@@ -13,8 +13,8 @@ book:
     - chapters/04-problemSolving.qmd
     - chapters/05-exams.qmd
     - chapters/06-timeManagement.qmd
-    - chapters/06-future.qmd
-    - chapters/06-usefulLinks.qmd
+    - chapters/07-future.qmd
+    - chapters/08-usefulLinks.qmd
 
 format:
   html:
