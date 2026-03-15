@@ -1,0 +1,24 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Field Guide to Mathematics at University" 
+  author: "First Year Student 25/26"
+  chapters:
+    - index.qmd
+    - chapters/01-jump.qmd
+    - chapters/02-lectures.qmd
+    - chapters/03-workshops.qmd
+    - chapters/04-problemSolving.qmd
+    - chapters/05-exams.qmd
+    - chapters/06-timeManagement.qmd
+    - chapters/06-future.qmd
+    - chapters/06-usefulLinks.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    search: true
