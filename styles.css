@@ -5,3 +5,15 @@
   padding-left: 1em;
   color: #555;
 }
+
+/* Reading progress bar */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #4e79a7;
+  z-index: 9999;
+  width: calc(100% * var(--scroll) );
+}
