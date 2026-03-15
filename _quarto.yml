@@ -3,6 +3,8 @@ project:
   output-dir: docs
 
 book:
+  title: "Field Guide to Mathematics at University"
+  author: "First Year Student 25/26"
   chapters:
     - index.qmd
     - file: chapters/01-jump.qmd
@@ -21,14 +23,17 @@ book:
       title: "Future"
     - file: chapters/08-useful-links.qmd
       title: "Useful Links"
-    
+
 format:
   html:
     theme:
       light: cosmo
       dark: darkly
     css: styles.css
+    include-in-header:
+      - progress.js
     toc: true
     search: true
     number-sections: true
     respect-user-color-scheme: true
+    toggle: true
