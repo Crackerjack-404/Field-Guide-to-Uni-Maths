@@ -3,7 +3,7 @@ set -euo pipefail
 
 mkdir -p generated
 
-for texfile in latex/*.tex; do
+for texfile in tex/*.tex; do
   base="$(basename "$texfile" .tex)"
   pandoc "$texfile" \
     --from=latex \
