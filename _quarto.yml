@@ -31,7 +31,8 @@ format:
       dark: darkly
     css: styles.css
     include-in-header:
-      - progress.js
+      - text: |
+          <script src="progress.js"></script>
     toc: true
     search: true
     number-sections: true
