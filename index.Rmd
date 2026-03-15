@@ -1,1 +1,9 @@
+ ---
+title: "Field Guide to Mathematics At Southampton"
+author: "First Year Student 25/26"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
+---
 
+# Hello World 
