@@ -43,3 +43,4 @@ format:
     number-sections: true
     respect-user-color-scheme: true
     toggle: true
+    page-navigation: true
