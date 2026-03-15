@@ -1,31 +1,29 @@
-name: Build LaTeX PDF
+name: Publish Quarto site
 
 on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-pdf:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto project
+        run: quarto render
+
+      - name: Deploy to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          root_file: main.tex
-          latexmk_use_lualatex: true
-
-      - name: Move PDF
-        run: |
-          mkdir -p assets/pdf
-          mv main.pdf assets/pdf/field-guide.pdf
-
-      - name: Commit updated PDF
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email actions@github.com
-          git add assets/pdf/field-guide.pdf
-          git commit -m "Update compiled PDF" || echo "No changes"
-          git push
+          target: gh-pages
