@@ -3,6 +3,8 @@ title: "A Field Guide to Mathematics at University"
 author: "First Year Student 25/26" 
 ---
 
+_Last updated: {{< meta date >}}_
+
 # What This Guide Is (and Isn't)
 
 > Mathematics is one of the most beautiful things in the world and it brings joy and fulfilment and frustration in equal measure, and what more could you possibly want out of life.  
