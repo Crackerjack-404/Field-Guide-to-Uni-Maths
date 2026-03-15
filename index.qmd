@@ -1,9 +1,10 @@
 ---
 title: "A Field Guide to Mathematics at University"
 author: "First Year Student 25/26" 
+date: last-modified
+date-format: "DD MM YYYY"
 ---
 
-_Last updated: {{< meta date >}}_
 
 # What This Guide Is (and Isn't)
 
