@@ -5,12 +5,14 @@ project:
     - pdf
   
 book:
-  navbar:
-    right:
-      - text: Download PDF
-        href: pdf/field-guide.pdf
   title: "Field Guide to Mathematics at University"
   author: "First Year Student 25/26"
+
+  sidebar:
+    tools:
+      - icon: download
+        href: pdf/field-guide.pdf
+        text: Download PDF
 
   chapters:
     - file: chapters/01-jump.qmd
