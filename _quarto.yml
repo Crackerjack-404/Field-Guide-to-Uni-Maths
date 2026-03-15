@@ -5,6 +5,10 @@ project:
 book:
   title: "Field Guide to Mathematics at University"
   author: "First Year Student 25/26"
+  navbar:
+    right:
+      - text: Download PDF
+        href: pdf/field-guide.pdf
   chapters:
     - index.qmd
     - file: chapters/01-jump.qmd
