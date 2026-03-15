@@ -40,6 +40,14 @@ I’ve also scattered a few [xkcd](https://xkcd.com/) references along the way b
 
 Not everyone signs up for a maths degree wanting a philosophical reflection on learning, and that’s completely fine. But if you want to care about **how you learn**, and not just *what* you learn, I hope this helps.
 
+::: {.callout-note}
+## Prefer reading offline?
+
+You can download the full PDF version of this guide here:
+
+[Download the PDF](pdf/field-guide.pdf)
+:::
+
 ![](xkcd/manuels.png){width=50%}
 
 *Source: [xkcd 1343 — Manuals](https://xkcd.com/1343/)*
