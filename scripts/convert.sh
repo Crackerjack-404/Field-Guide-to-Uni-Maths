@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p generated
+mkdir -p chapters
 
 for texfile in tex/*.tex; do
   base="$(basename "$texfile" .tex)"
@@ -9,5 +9,5 @@ for texfile in tex/*.tex; do
     --from=latex \
     --to=markdown \
     --wrap=none \
-    --output="generated/${base}.Rmd"
+    --output="chapters/${base}.qmd"
 done
