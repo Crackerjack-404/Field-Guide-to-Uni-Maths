@@ -47,7 +47,7 @@ Not everyone signs up for a maths degree wanting a philosophical reflection on l
 
 You can download the full PDF version of this guide here:
 
-[Download the PDF](pdf/field-guide.pdf)
+[Download the PDF](assets/pdf/field-guide.pdf)
 :::
 
 ![](xkcd/manuels.png){width=50%}
