@@ -3,18 +3,25 @@ project:
   output-dir: docs
 
 book:
-  title: "Field Guide to Mathematics at University" 
-  author: "First Year Student 25/26"
   chapters:
     - index.qmd
-    - chapters/01-the-jump.qmd
-    - chapters/02-lectures-and-coursework.qmd
-    - chapters/03-workshops-and-other-resources.qmd
-    - chapters/04-problem-solving.qmd
-    - chapters/05-exams.qmd
-    - chapters/06-time-management.qmd
-    - chapters/07-future.qmd
-    - chapters/08-useful-links.qmd
+    - file: chapters/01-jump.qmd
+      title: "The Jump"
+    - file: chapters/02-lectures.qmd
+      title: "Lectures and Coursework"
+    - file: chapters/03-workshops.qmd
+      title: "Workshops and Other Resources"
+    - file: chapters/04-problem-solving.qmd
+      title: "Problem Solving"
+    - file: chapters/05-exams.qmd
+      title: "Exams"
+    - file: chapters/06-time-management.qmd
+      title: "Time Management"
+    - file: chapters/07-future.qmd
+      title: "Future"
+    - file: chapters/08-useful-links.qmd
+      title: "Useful Links"
+    
 
 format:
   html:
