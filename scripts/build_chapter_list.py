@@ -37,14 +37,14 @@ format:
     include-in-header:
       - text: |
           <script>
-          document.addEventListener("scroll", () => {
+          document.addEventListener("scroll", () => {{
             const scrollTop = document.documentElement.scrollTop;
             const height =
               document.documentElement.scrollHeight -
               document.documentElement.clientHeight;
             const scroll = height > 0 ? scrollTop / height : 0;
             document.body.style.setProperty("--scroll", scroll);
-          });
+          }});
           </script>
     toc: true
     search: true
