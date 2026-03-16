@@ -36,7 +36,16 @@ format:
     css: styles.css
     include-in-header:
       - text: |
-          <script src="progress.js"></script>
+          <script>
+          document.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const height =
+              document.documentElement.scrollHeight -
+              document.documentElement.clientHeight;
+            const scroll = scrollTop / height;
+            document.body.style.setProperty("--scroll", scroll);
+          });
+          </script>
     toc: true
     search: true
     number-sections: true
