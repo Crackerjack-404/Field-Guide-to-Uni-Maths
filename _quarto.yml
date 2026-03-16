@@ -13,7 +13,7 @@ book:
     search: true
     tools:
       - icon: download
-        href: pdf/field-guide.pdf
+        href: assets/field-guide.pdf
         text: Download PDF
 
   chapters:
