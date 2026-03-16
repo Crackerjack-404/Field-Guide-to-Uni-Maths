@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-from pathlib import Path
-
 chapter_files = sorted(Path("chapters").glob("*.qmd"))
 
 chapters_yaml = "\n".join([f"    - {p.as_posix()}" for p in chapter_files])
