@@ -1,9 +1,36 @@
+/* epigraph base styling */
 .epigraph {
   font-style: italic;
-  margin-left: 2em;
-  border-left: 4px solid #ddd;
-  padding-left: 1em;
+  margin: 2rem 0;
+}
+
+/* light mode */
+[data-bs-theme="light"] .epigraph {
   color: #555;
+}
+
+/* dark mode */
+[data-bs-theme="dark"] .epigraph {
+  color: #b0b0b0;
+}
+
+.epigraph footer {
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.9em;
+}
+
+[data-bs-theme="light"] .epigraph footer {
+  color: #777;
+}
+
+[data-bs-theme="dark"] .epigraph footer {
+  color: #9a9a9a;
+}
+
+.epigraph {
+  border-left: 3px solid var(--bs-primary);
+  padding-left: 1rem;
 }
 
 /* Reading progress bar */
