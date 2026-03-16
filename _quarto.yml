@@ -21,11 +21,11 @@ book:
     - chapters/01-jump.qmd
     - chapters/02-lectures.qmd
     - chapters/03-workshops.qmd
-    - chapters/04-problem-solving.qmd
+    - chapters/04-problemSolving.qmd
     - chapters/05-exams.qmd
-    - chapters/06-time-management.qmd
+    - chapters/06-timeManagement.qmd
     - chapters/07-future.qmd
-    - chapters/08-useful-links.qmd
+    - chapters/08-usefulLinks.qmd
 
 format:
   html:
