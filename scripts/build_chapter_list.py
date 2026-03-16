@@ -52,6 +52,5 @@ format:
     respect-user-color-scheme: true
     toggle: true
     page-navigation: true
-    date: last-modified
 """
 Path("_quarto.yml").write_text(content, encoding="utf-8")
