@@ -18,11 +18,20 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
     css: styles.css
+    include-in-header:
+      - text: |
+          <script src="progress.js"></script>
     toc: true
     search: true
     number-sections: true
+    respect-user-color-scheme: true
+    toggle: true
+    page-navigation: true
+    date: last-modified
 """
 
 Path("_quarto.yml").write_text(content, encoding="utf-8")
