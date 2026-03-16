@@ -1,1 +1,52 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - pdf
+    - xkcd
 
+book:
+  title: "Field Guide to Mathematics at University"
+  author: "First Year Student 25/26"
+
+  sidebar:
+    search: true
+    tools:
+      - icon: download
+        href: pdf/field-guide.pdf
+        text: Download PDF
+
+  chapters:
+    - index.qmd
+    - chapters/01-jump.qmd
+    - chapters/02-lectures.qmd
+    - chapters/03-workshops.qmd
+    - chapters/04-problem-solving.qmd
+    - chapters/05-exams.qmd
+    - chapters/06-time-management.qmd
+    - chapters/07-future.qmd
+    - chapters/08-useful-links.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    include-in-header:
+      - text: |
+          <script>
+          document.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const height =
+              document.documentElement.scrollHeight -
+              document.documentElement.clientHeight;
+            const scroll = height > 0 ? scrollTop / height : 0;
+            document.body.style.setProperty("--scroll", scroll);
+          });
+          </script>
+    toc: true
+    number-sections: true
+    search: true
+    respect-user-color-scheme: true
+    page-navigation: true
