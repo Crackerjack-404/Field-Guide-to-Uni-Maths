@@ -18,7 +18,7 @@ It won’t teach you how to compute an integral or prove a theorem step by step.
 
 Think of it instead as a transition guide, written from inside the experience and not from the other side of it.
 
-There are countless books and resources about transitioning to university mathematics. However, most I found were written by people who had already finished the journey and looked back with clarity and hindsight, so I wanted something written from inside the process — something honest that reflects what progress feels like while it’s happening.
+There are countless books and resources about transitioning to university mathematics. However, most I found were written by people who had already finished the journey and looked back with clarity and hindsight, so I wanted something written from inside the process, something honest that reflects what progress feels like while it's happening. 
 
 This guide is written by a student who is still in the process of learning how to do university mathematics. That matters. It means the reflections here are not polished by years of hindsight, but shaped by recent confusion, breakthroughs, stress before exams, and moments where something finally clicked.
 
