@@ -28,9 +28,6 @@ jobs:
       - name: Convert LaTeX chapters to Quarto
         run: bash scripts/convert.sh
 
-      - name: Build Quarto chapter list
-        run: python3 scripts/build_chapter_list.py
-
       - name: Render Quarto book
         run: quarto render
 
