@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
+from pathlib import Path
+
+chapter_files = sorted(Path("chapters").glob("*.qmd"))
+
+chapters_yaml = "\n".join([f"    - {p.as_posix()}" for p in chapter_files])
+
 content = f"""project:
   type: book
   output-dir: docs
@@ -20,22 +26,8 @@ book:
         text: Download PDF 
   
   chapters:
-    - file: chapters/01-jump.qmd
-      title: "The Jump"
-    - file: chapters/02-lectures.qmd
-      title: "Lectures and Coursework"
-    - file: chapters/03-workshops.qmd
-      title: "Workshops and Other Resources"
-    - file: chapters/04-problem-solving.qmd
-      title: "Problem Solving"
-    - file: chapters/05-exams.qmd
-      title: "Exams"
-    - file: chapters/06-time-management.qmd
-      title: "Time Management"
-    - file: chapters/07-future.qmd
-      title: "Future"
-    - file: chapters/08-useful-links.qmd
-      title: "Useful Links"
+    - index.qmd
+{chapters_yaml}
 
 
 format:
