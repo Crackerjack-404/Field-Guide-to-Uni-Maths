@@ -42,7 +42,7 @@ format:
             const height =
               document.documentElement.scrollHeight -
               document.documentElement.clientHeight;
-            const scroll = scrollTop / height;
+            const scroll = height > 0 ? scrollTop / height : 0;
             document.body.style.setProperty("--scroll", scroll);
           });
           </script>
