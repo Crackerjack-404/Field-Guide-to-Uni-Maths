@@ -14,7 +14,15 @@ for texfile in tex/*.tex; do
     --shift-heading-level-by=1 \
     --output="chapters/${base}.qmd"
 
-  sed -i 's|\\includegraphics.*{xkcd/|![](../xkcd/|g' "chapters/${base}.qmd"
+  # --- FIX 1: image paths (most important) ---
+  sed -i 's|![](xkcd/|![](../xkcd/|g' "$file"
+  sed -i 's|src="xkcd/|src="../xkcd/|g' "$file"
+
+  # --- FIX 2: remove leftover LaTeX graphics ---
+  sed -i 's|\\includegraphics.*{xkcd/|![](../xkcd/|g' "$file"
+
+  # --- FIX 3: ensure .png extension exists (if missing) ---
+  sed -i 's|![](../xkcd/\([^.)]*\))|![](../xkcd/\1.png)|g' "$file"
 
   # prepend a proper chapter heading
   tmpfile="$(mktemp)"
