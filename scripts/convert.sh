@@ -14,6 +14,8 @@ for texfile in tex/*.tex; do
     --shift-heading-level-by=1 \
     --output="chapters/${base}.qmd"
 
+  sed -i 's|\\includegraphics.*{xkcd/|![](../xkcd/|g' "chapters/${base}.qmd"
+
   # prepend a proper chapter heading
   tmpfile="$(mktemp)"
   printf '# %s\n\n' "$(python3 - <<PY
