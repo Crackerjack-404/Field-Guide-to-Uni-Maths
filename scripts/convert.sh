@@ -19,14 +19,18 @@ for texfile in tex/*.tex; do
   # --- FIX ALL IMAGE ISSUES USING PYTHON ---
   python3 - <<PY
 from pathlib import Path
-import re
 
 p = Path("$file")
 text = p.read_text()
 
-text = re.sub(r'!\[\]\(xkcd/', '![](../xkcd/', text)
-text = re.sub(r'src="xkcd/', 'src="../xkcd/', text)
-text = re.sub(r'\\includegraphics.*?{xkcd/', '![](../xkcd/', text)
+# Fix Markdown + HTML paths
+text = text.replace('(xkcd/', '(../xkcd/')
+text = text.replace('src="xkcd/', 'src="../xkcd/')
+
+# Rough LaTeX includegraphics → Markdown
+text = text.replace('\\includegraphics', '![](')
+text = text.replace('{xkcd/', '../xkcd/')
+text = text.replace('}', ')')
 
 p.write_text(text)
 PY
