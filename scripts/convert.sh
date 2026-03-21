@@ -14,6 +14,8 @@ for texfile in tex/*.tex; do
     --shift-heading-level-by=1 \
     --output="chapters/${base}.qmd"
 
+  file="chapters/${base}.qmd"
+
   # --- FIX 1: image paths (most important) ---
   sed -i 's|![](xkcd/|![](../xkcd/|g' "$file"
   sed -i 's|src="xkcd/|src="../xkcd/|g' "$file"
