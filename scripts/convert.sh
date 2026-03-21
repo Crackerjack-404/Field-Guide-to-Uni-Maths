@@ -14,9 +14,6 @@ for texfile in tex/*.tex; do
     --shift-heading-level-by=1 \
     --output="chapters/${base}.qmd"
 
-  # Fix image paths for chapter files:
-  sed -i 's|xkcd/|../xkcd/|g' "chapters/${base}.qmd"
-
   # prepend a proper chapter heading
   tmpfile="$(mktemp)"
   printf '# %s\n\n' "$(python3 - <<PY
