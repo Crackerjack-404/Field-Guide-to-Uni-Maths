@@ -16,24 +16,21 @@ for texfile in tex/*.tex; do
 
   file="chapters/${base}.qmd"
 
-  # --- FIX 1: image paths (most important) ---
+  # --- FIX 1: image paths ---
   sed -i 's|![](xkcd/|![](../xkcd/|g' "$file"
   sed -i 's|src="xkcd/|src="../xkcd/|g' "$file"
 
-  # --- FIX 2: remove leftover LaTeX graphics ---
+  # --- FIX 2: LaTeX includegraphics fallback ---
   sed -i 's|\\includegraphics.*{xkcd/|![](../xkcd/|g' "$file"
 
-  # --- FIX 3: ensure .png extension exists (if missing) ---
-  sed -i 's|![](../xkcd/\([^.)]*\))|![](../xkcd/\1.png)|g' "$file"
-
-  # prepend a proper chapter heading
+  # prepend chapter heading
   tmpfile="$(mktemp)"
   printf '# %s\n\n' "$(python3 - <<PY
 s = "${title}"
 print(" ".join(w.capitalize() for w in s.split()))
 PY
 )" > "$tmpfile"
-  cat "chapters/${base}.qmd" >> "$tmpfile"
-  mv "$tmpfile" "chapters/${base}.qmd"
-done
+  cat "$file" >> "$tmpfile"
+  mv "$tmpfile" "$file"
 
+done
