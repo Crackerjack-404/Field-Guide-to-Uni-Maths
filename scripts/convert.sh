@@ -19,18 +19,29 @@ for texfile in tex/*.tex; do
   # --- FIX ALL IMAGE ISSUES USING PYTHON ---
   python3 - <<PY
 from pathlib import Path
+import re
 
 p = Path("$file")
 text = p.read_text()
 
-# Fix Markdown + HTML paths
+# --- Fix image paths ---
 text = text.replace('(xkcd/', '(../xkcd/')
 text = text.replace('src="xkcd/', 'src="../xkcd/')
 
-# Rough LaTeX includegraphics → Markdown
-text = text.replace('\\includegraphics', '![](')
-text = text.replace('{xkcd/', '../xkcd/')
-text = text.replace('}', ')')
+# --- Convert LaTeX includegraphics to Markdown ---
+text = re.sub(
+    r'\\includegraphics(?:\[[^\]]*\])?{([^}]*)}',
+    r'![](\1)',
+    text
+)
+
+# --- Fix linewidth → percentage ---
+text = text.replace('0.5\\linewidth', '50%')
+text = text.replace('0.4\\linewidth', '40%')
+text = text.replace('0.3\\linewidth', '30%')
+
+# --- Clean up leftover LaTeX width syntax ---
+text = re.sub(r'{width\s*=\s*([^}]*)}', r'{width=\1}', text)
 
 p.write_text(text)
 PY
