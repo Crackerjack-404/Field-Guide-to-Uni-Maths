@@ -16,12 +16,20 @@ for texfile in tex/*.tex; do
 
   file="chapters/${base}.qmd"
 
-  # --- FIX 1: image paths ---
-  sed -i 's|![](xkcd/|![](../xkcd/|g' "$file"
-  sed -i 's|src="xkcd/|src="../xkcd/|g' "$file"
+  # --- FIX ALL IMAGE ISSUES USING PYTHON ---
+  python3 - <<PY
+from pathlib import Path
+import re
 
-  # --- FIX 2: LaTeX includegraphics fallback ---
-  sed -i 's|\\includegraphics.*{xkcd/|![](../xkcd/|g' "$file"
+p = Path("$file")
+text = p.read_text()
+
+text = re.sub(r'!\[\]\(xkcd/', '![](../xkcd/', text)
+text = re.sub(r'src="xkcd/', 'src="../xkcd/', text)
+text = re.sub(r'\\includegraphics.*?{xkcd/', '![](../xkcd/', text)
+
+p.write_text(text)
+PY
 
   # prepend chapter heading
   tmpfile="$(mktemp)"
@@ -34,3 +42,5 @@ PY
   mv "$tmpfile" "$file"
 
 done
+
+echo "Done."
