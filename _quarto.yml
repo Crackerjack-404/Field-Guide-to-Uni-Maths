@@ -6,7 +6,7 @@ project:
     - xkcd
 
 book:
-  title: "Field Guide to Mathematics at University"
+  title: "Field Guide to Mathematics at Southampton"
   author: "First Year Student 25/26"
 
   sidebar:
@@ -15,6 +15,10 @@ book:
       - icon: download
         href: assets/field-guide.pdf
         text: Download PDF
+
+      - icon: link 
+        href: https://www.southampton.ac.uk/about/faculties-schools-departments/school-of-mathematical-sciences
+        text: School of Mathematical Sciences 
 
   chapters:
     - index.qmd
