@@ -19,31 +19,33 @@ for texfile in tex/*.tex; do
   # --- FIX ALL IMAGE ISSUES USING PYTHON ---
   python3 - <<PY
 from pathlib import Path
-import re
 
 p = Path("$file")
-text = p.read_text()
+lines = p.read_text().splitlines()
 
-# --- Fix paths ---
-text = text.replace('(xkcd/', '(../xkcd/')
-text = text.replace('src="xkcd/', 'src="../xkcd/')
+new_lines = []
 
-# --- Convert includegraphics safely ---
-text = re.sub(
-    r'\\includegraphics(?:\[[^\]]*\])?{([^}]*)}',
-    r'![](../\1)',
-    text
-)
+for line in lines:
+    # Fix paths first
+    line = line.replace('(xkcd/', '(../xkcd/')
+    line = line.replace('src="xkcd/', 'src="../xkcd/')
 
-# --- Fix linewidth → percentage ---
-text = text.replace('0.5\\linewidth', '50%')
-text = text.replace('0.4\\linewidth', '40%')
-text = text.replace('0.3\\linewidth', '30%')
+    # Convert includegraphics safely
+    if '\\includegraphics' in line:
+        start = line.find('{')
+        end = line.find('}')
+        if start != -1 and end != -1:
+            path = line[start+1:end]
+            line = f"![](../{path})"
 
-# --- Clean spacing ---
-text = re.sub(r'{\s*width\s*=\s*([^}]*)}', r'{width=\1}', text)
+    # Fix linewidth
+    line = line.replace('0.5\\linewidth', '50%')
+    line = line.replace('0.4\\linewidth', '40%')
+    line = line.replace('0.3\\linewidth', '30%')
 
-p.write_text(text)
+    new_lines.append(line)
+
+p.write_text("\n".join(new_lines))
 PY
 
   # prepend chapter heading
