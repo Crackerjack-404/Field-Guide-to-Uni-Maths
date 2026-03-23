@@ -22,7 +22,7 @@ book:
 
   chapters:
     - index.qmd
-    - chapters/01-the jump.qmd
+    - chapters/01-the jump to university.qmd
     - chapters/02-lectures and coursework.qmd
     - chapters/03-workshops and other resources.qmd
     - chapters/04-problem Solving.qmd
