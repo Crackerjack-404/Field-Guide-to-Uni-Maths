@@ -14,15 +14,9 @@ date-format: "DD MM YYYY"
 
 This is not a Maths textbook.
 
-It won’t teach you how to compute an integral or prove a theorem step by step. It won’t replace lectures, problem sheets, or workshops, and it isn’t a shortcut through the degree.
-
-Think of it instead as a transition guide, written from inside the experience and not from the other side of it.
+It won’t teach you how to compute an integral or prove a theorem step by step. It won’t replace lectures, problem sheets, or workshops, and it isn’t a shortcut through the degree. Think of it instead as a transition guide, written from inside the experience and not from the other side of it.
 
 There are countless books and resources about transitioning to university mathematics. However, most I found were written by people who had already finished the journey and looked back with clarity and hindsight, so I wanted something written from inside the process, something honest that reflects what progress feels like while it's happening. 
-
-This guide is written by a student who is still in the process of learning how to do university mathematics. That matters. It means the reflections here are not polished by years of hindsight, but shaped by recent confusion, breakthroughs, stress before exams, and moments where something finally clicked.
-
-There is a difference between having mathematical tools and knowing how to use them in unfamiliar territory. At school, I often felt like I was collecting tools, and when I came to university, I realised I didn't always know how to use them.
 
 This guide is not comprehensive. It does not cover every module or every scenario. It is simply an attempt to articulate the parts of the degree that are rarely written down: the mindset shift, the moments of doubt, the practical habits that make things easier, and the difference between understanding something and merely recognising it.
 
@@ -30,7 +24,7 @@ In the chapters that follow, I’ll talk about:
 
 - The shift from school mathematics to university mathematics  
 - What lectures, coursework, and workshops are really for  
-- How to approach problem solving when you don’t immediately know what to do  
+- How to approach problem-solving when you don’t immediately know what to do  
 - The temptation to outsource thinking, and what that costs  
 - Revision, exams, and time management  
 - Asking for help, giving useful feedback, and making the most of helpful resources  
