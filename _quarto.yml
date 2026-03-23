@@ -28,8 +28,7 @@ book:
     - chapters/04-problem Solving.qmd
     - chapters/05-exams.qmd
     - chapters/06-time Management.qmd
-    - chapters/07-future.qmd
-    - chapters/08-useful Links.qmd
+    - chapters/07-Common Terms, Abbreviations, and Useful Links.qmd
 
 format:
   html:
