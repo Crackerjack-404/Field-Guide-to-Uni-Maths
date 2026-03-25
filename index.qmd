@@ -42,6 +42,6 @@ You can download the full PDF version of this guide here:
 [Download the PDF](assets/field-guide.pdf)
 :::
 
-![](xkcd/manuels.png){width=50%}
+![](xkcd/manuels.png){width=100%}
 
 *Source: [xkcd 1343 — Manuals](https://xkcd.com/1343/)*
