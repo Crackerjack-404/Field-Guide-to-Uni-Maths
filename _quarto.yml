@@ -32,6 +32,7 @@ book:
 
 format:
   html:
+    google-analytics: "G-1FQFT7DTVE"
     theme:
       light: cosmo
       dark: darkly
