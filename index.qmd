@@ -10,7 +10,7 @@ date-format: "DD MM YYYY"
 
 > Mathematics is one of the most beautiful things in the world and it brings joy and fulfilment and frustration in equal measure, and what more could you possibly want out of life.  
 >
-> — *Graham A. Niblo*
+> — *Professor Graham A. Niblo*
 
 This is not a Maths textbook.
 
