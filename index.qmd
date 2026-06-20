@@ -39,6 +39,10 @@ Not everyone signs up for a maths degree wanting a philosophical reflection on l
 
 This guide reflects one student's experience of first-year mathematics at Southampton, not official university policy. For regulatory issues, always consult university's own guidance through the Student Hub rather than relying on this guide.
 
+:::
+
+::: {.callout-note}
+
 ## Prefer reading offline?
 
 You can download the full PDF version of this guide here:
